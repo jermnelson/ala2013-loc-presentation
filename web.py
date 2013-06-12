@@ -26,9 +26,11 @@ def bibframe_redis():
     return template('bibframe-redis',
                     category='slide',
                     cover_art_key='bf:CoverArt:34',
-                    description=SLIDE_DESCS['bibframe-redis'],
                     creative_wrk_key='bf:MovingImage:1',
+                    description=SLIDE_DESCS['bibframe-redis'],
+                    holding_key='bf:Holding:234',
                     instance_key='bf:Instance:1',
+                    person_key='bf:Person:890',
                     facet_annotation_key='bf:Annotation:Facet:1',
                     )
 

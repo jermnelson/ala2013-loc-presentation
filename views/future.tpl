@@ -8,7 +8,8 @@
 
 <div class="row-fluid marketing">
  <div class="span12 alert alert-block">
-  <h2 align="center">E - Engage</h2>
+ <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h2 align="center" class="slide">E - Engage</h2>
   <p class="lead">Increase <strong>engagement</strong> with Users</p>
   <p class="lead">
    Current status of the Redis Service Platform is very much of a 
@@ -18,8 +19,9 @@
  </div>
 </div>
 <div class="row-fluid marketing">
- <div class="span12 alert alert-block">
- <h2 align="center">E - Enhance</h2>
+ <div class="span12 alert alert-block alert-info">
+ <button type="button" class="close" data-dismiss="alert">&times;</button>
+ <h2 align="center" class="slide">E - Enhance</h2>
  <p class="lead">Planned <strong>enhancements</strong> to 
  the Redis Library Services Platform including further semantic 
  harvesting of usable Linked Data from Library of Congress, Wikipedia, 
@@ -27,8 +29,9 @@
  </div>
 </div>
 <div class="row-fluid marketing">
- <div class="span12 alert alert-block">
- <h2 align="center">E - Embrace</h2>
+ <div class="span12 alert alert-block alert-success">
+ <button type="button" class="close" data-dismiss="alert">&times;</button>
+ <h2 align="center" class="slide">E - Embrace</h2>
  <p class="lead"><strong>Embracing</strong> existing vocabularies and ontologies as driven
  by actionable metrics and desires of the platform's users. This includes closely tracking
  the <a href="/glossary.html#bibframe">Bibframe</a> vocabulary as it improves and changes
@@ -36,8 +39,8 @@
  </div>
 </div>
 <div class="row-fluid marketing">
- <div class="span12 alert alert-block">
- <h2 align="center">E - Extend</h2>
+ <div class="span12 alert alert-block alert-error">
+ <h2 align="center" class="slide">E - Extend</h2>
  <p class="lead">The Redis Library Services Platform is designed to be easily
  <strong>extended</strong>. In the coming months and driven by the desires of the user
  community, the Redis Services Platform is looking at a 

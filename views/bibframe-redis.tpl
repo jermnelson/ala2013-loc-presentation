@@ -12,7 +12,7 @@
 <div class="row-fluid marketing">
  <div class="span8">
 <div>
-   <h4>Creative Work Entity <strong>bf:MovingImage:1</strong></h4>
+   <h4>Creative Work Entity - <em>bf:MovingImage:1</em></h4>
    <p>Example of a Moving Image Creative Work, in this case the
       199x movie version of <em>Pride and Prejudice</em>
    </p>
@@ -21,17 +21,30 @@
    </code>
   </div>
   <div>
-   <h4>Instance Entity <strong>{{ instance_key }}</strong> </h4>
+   <h4>Instance Entity - <em>{{ instance_key }}</em></h4>
    <code>
     redis_datastore.hgetall('{{ instance_key }}') 
    </code>
   </div>
   <div>
-   <h4>Cover Art Entity <strong>{{ cover_art_key }}</strong></h4>
+   <h4>Cover Art Entity - <strong>{{ cover_art_key }}</strong></h4>
    <code>
      redis_datastore.hgetall('{{ cover_art_key }}')
    </code>
   </div>
+  <div>
+   <h4>Person - <strong>{{ person_key }}</strong></h4>
+   <code>
+     redis_datastore.hgetall('{{ person_key }}')
+   </code>
+  </div>
+  <div>
+   <h4>Library Holding - <strong>{{ holding_key }}</strong></h4>
+   <code>
+     redis_datastore.hgetall('{{ holding_key }}')
+   </code>
+  </div>
+
  </div>
 
  <div class="span4">

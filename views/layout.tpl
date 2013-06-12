@@ -49,7 +49,7 @@
         margin-top: 28px;
       }
 
-      h1.slide {
+      .slide {
        color: #530921 !important;
       }
     </style>
