@@ -32,6 +32,7 @@
         text-align: center;
       }
       .jumbotron h1 {
+        color: #530921; 
         font-size: 72px;
         line-height: 1;
       }
@@ -46,6 +47,10 @@
       }
       .marketing p + h4 {
         margin-top: 28px;
+      }
+
+      h1.slide {
+       color: #530921 !important;
       }
     </style>
     <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
@@ -74,7 +79,6 @@
 
     <div class="container-narrow">
     
-      %include masthead
 
 
 

@@ -1,10 +1,14 @@
+%include masthead category='home'
+
 <div class="jumbotron">
  <h1>BIBFRAME &amp; the Redis Library Services Platform</h1>
   <p class="lead">
-
+   Jeremy Nelson<br>
+   Metadata and Systems Librarian<br>
+   Colorado College
   </p>
-  <a class="btn btn-large btn-success" href="#">
-    Slide 1 >>
+  <a class="btn btn-large btn-success" href="/redis-library-services-platform">
+    <i class="icon-play icon-2x"></i>
   </a>
 </div>
 
@@ -12,7 +16,7 @@
 
 <div class="row-fluid marketing">
  <div class="span6">
-   <h4>Redis Library Services Platform (RLSP) <a href="/bibframe-redis"><i class="icon-fullscreen"></i></a></h4>
+   <h4>Redis Library Services Platform (RLSP) <a href="/redis-library-services-platform"><i class="icon-fullscreen"></i></a></h4>
    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 
    <h4>BIBFRAME Entities in Redis <a href="/bibframe-redis"><i class="icon-fullscreen"></i></a></h4>
@@ -26,14 +30,18 @@
    <h4>Fedora Commons MODS Ingestion into RLSP <a href="/mods-ingestion"><i class="icon-fullscreen"></i></a></h4>
    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 
-   <h4>Resources <a href="/resources"><i class="icon-fullscreen"></i></a></h4>
+   <h4>Future Directions <a href="/future"><i class="icon-fullscreen"></i></a></h4>
    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
 
-   <h4>Contact <a href="/contact"><i class="icon-fullscreen"></i></a></h4>
+   <h4>Addendum</a></h4>
+   <a href="/resources">Resources</a> used in this presentation. A <a href="/glossary.html">Glossary</a> of
+   termnology.
+   <h5>Contact</h5>
    <p>
-    <a href="mailto:jeremy.nelson@coloradocollege.edu">jeremy.nelson@coloradocollege.edu</a> or on 
-    <i class="icon-twitter-sign icon-large"></i> at
-    <a href="https://twitter.com/jermnelson">@jermnelson</a> 
+    <a href="mailto:jeremy.nelson@coloradocollege.edu">jeremy.nelson@coloradocollege.edu</a> or 
+   </p>
+   <p> 
+    <a href="https://twitter.com/jermnelson"><i class="icon-twitter-sign icon-large"></i> @jermnelson</a> 
    </p>
  </div>
 </div>
