@@ -11,11 +11,26 @@ from bottle import template, request, route, run, static_file
 
 PROJECT_ROOT = os.path.abspath(__name__)
 
+SLIDE_DESCS = {'bibframe-redis': """Bibframe entities are represented in the Redis Library Services Platform
+as a collection of Redis key patterns. By convention, most Bibframe Entities
+core Redis key is associated with a Redis hash data primitive.""",
+               'rlsp': """The Redis Library Services Platform is made up of two open-souce
+projects, the <a href="/glossary.html#ala">Aristotle Library Apps</a> and the
+<a href="/glossary.html#bibframe-datastore">Bibframe Datastore</a>."""
+}
+
+
 @route("/bibframe-redis")
 def bibframe_redis():
     "Slide view for BIBFRAME Entities in Redis" 
     return template('bibframe-redis',
-                    category='slide')
+                    category='slide',
+                    cover_art_key='bf:CoverArt:34',
+                    description=SLIDE_DESCS['bibframe-redis'],
+                    creative_wrk_key='bf:MovingImage:1',
+                    instance_key='bf:Instance:1',
+                    facet_annotation_key='bf:Annotation:Facet:1',
+                    )
 
 @route("/contact")
 def contact():
@@ -63,6 +78,7 @@ def resources():
 def index():
     record_sets = {}
     return template('index',
-                    category='home')
+                    category='home',
+                    slide_descs=SLIDE_DESCS)
 
 run(host='localhost', port=8013, reloader=True)

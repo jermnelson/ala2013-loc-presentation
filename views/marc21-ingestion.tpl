@@ -1,6 +1,6 @@
 <div class="hero-unit">
- <h3>Bibframe &amp; Redis Library Services Platform</h3>
- <h1 class="slide">Ingesting MARC21 records into RLSP</h1>
+ <h3>Experimenting with Bibframe &amp; Redis</h3>
+ <h1 class="slide">Ingesting MARC21 Records</h1>
  <p class="lead">
   Ingesting MARC21 records into BIBFRAME entities in the Redis Library Services
   Platform uses a number of <a href="/glossary.html#python">Python</a> modules

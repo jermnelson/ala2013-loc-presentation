@@ -1,6 +1,6 @@
 <div class="hero-unit">
- <h3>Bibframe &amp; Redis Library Services Platform</h3>
- <h1 class="slide">Ingesting MODS Records into RLSP</h1>
+ <h3>Experimenting with Bibframe &amp; Redis</h3>
+ <h1 class="slide">Ingesting MODS Records</h1>
  <p class="lead">
   Using a MODS-to-MARC crosswalk, MODS metadata of Digital artifacts in a 
   <a href="/glossary.html#fedora-commons">Fedora Commons</a> repository 

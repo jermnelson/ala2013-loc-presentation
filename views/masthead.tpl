@@ -20,9 +20,9 @@
     <ul class="dropdown-menu" role="menu">
      <li><a href="/redis-library-services-platform">Redis Library Services Platform</a></li>
      <li><a href="/bibframe-redis">Bibframe Entities in Redis</a></li>
-     <li><a href="/marc21-ingestion">Ingesting MARC21 records into RLSP</a></li>
-     <li><a href="/mods-ingestion">Ingesting MODS records into RLSP</a></li>
-     <li><a href="/future">Future Directions</a></li>
+     <li><a href="/marc21-ingestion">Ingesting MARC21 Records</a></li>
+     <li><a href="/mods-ingestion">Ingesting MODS Records</a></li>
+     <li><a href="/future">The Future: 4 Es + 1</a></li>
     </ul>
   </li>
   <li
@@ -40,7 +40,7 @@
     </a>
     <ul class="dropdown-menu" role="menu">
       <li><a href="/resources">Resources</a></li>
-      <li><a href="/glossary">Glossary</a></li>
+      <li><a href="/glossary.html">Glossary</a></li>
       <li><a href="/contact">Contact Information</a></li> 
     </ul>
     </a>
