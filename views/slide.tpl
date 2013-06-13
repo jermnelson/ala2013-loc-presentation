@@ -1,4 +1,4 @@
-%include masthead category='slide'
+%include masthead category='slide', page=page, slides=slides
 
 <div class="row-fluid marketing">
  <div class="btn-group"> 

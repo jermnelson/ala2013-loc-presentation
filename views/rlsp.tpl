@@ -1,11 +1,9 @@
 <div class="row-fluid">
   <div class="span12 hero-unit">
    <h3>Experimenting with Bibframe & Redis</h3>
-   <h1 class="slide">Redis Library Services Platform (RLSP)</h1>
+   <h1 class="slide">{{!slides[0].get('headline')}}</h1>
    <p class="lead">
-    The Redis Library Services Platform is made up of two open-souce 
-    projects, the <a href="/glossary.html#ala">Aristotle Library Apps</a>
-    and the <a href="/glossary.html#bibframe-datastore">Bibframe Datastore</a>.
+    {{!slides[0].get('description')}}
    </p>
   </div>
 </div>
@@ -20,12 +18,12 @@
    targeting mobile and tablet user-interfaces with progessie enhancements for full-desktop
    web browsers and network speeds.
   </p>
-  <ul>
-   <li>Based on <a href="/glossary.html#django">Django</a> and interfaces with
-   <a href="/glossary.html#redis">Redis datastore</a>, 
-   <a href="/glossary.html#solr">Solr</a> text indexer, and 
-   <a href="/glossary.html#fedora">Fedora commons</a> digital repository 
-   software.
+  <ul class="icons-ul lead">
+   <li><i class="icon-li icon-arrow-right"></i>Based on <a href="/glossary.html#django">Django</a></li>
+   <li><i class="icon-li icon-arrow-right"></i>Interfaces with <a href="/glossary.html#redis">Redis datastore</a></li>
+   <li><i class="icon-li icon-arrow-right"></i><a href="/glossary.html#solr">Solr</a> text indexer </li>
+   <li><i class="icon-li icon-arrow-right"></i><a href="/glossary.html#fedora">Fedora commons</a> digital repository 
+   software.</li>
   </ul>
  </div>
 
@@ -34,7 +32,58 @@
   <p class="lead">Collection of redis configuration files and Lua server-side scripts including documentation
      on running Redis as a bibliographic and operational datastore as single instance or as a 
      cluster of Redis instances.
-  </p>   
+  </p> 
+  </div>
+</div>
+
+<hr>
+
+<div class="row-fluid marketing">
+ <div class="span8">
+  <h3>Biframe Key Distribution for Demo Redis Library Services Platform</h3>
+  <canvas id="cc-rlsp-pie" width="400" height="400"></canvas> 
+ </div>
+ <div class="span4">
+  <table class="table table-bordered table-striped">
+   <thead>
+    <tr>
+     <th colspan="2">Legend:</th>
+    </tr>
+    <tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td><strong>bf:Works</strong></td>
+     <td style="background-color: #F38630">33,906</td>
+    </tr>
+    <tr>
+     <td><strong>bf:Instances</strong></td>
+     <td style="background-color: #E0E4CC">33,906</td>
+    </tr>  
+    <tr>
+     <td><strong>bf:Persons</strong></td>
+     <td style="background-color: #69D2E7">41,402</td>
+
+    </tr> 
+   </tbody>
+  </table>
  </div>
 </div>
-%rebase slide previous="/", next="bibframe-redis"
+
+<script src="http://twitter.github.io/bootstrap/assets/js/jquery.js"></script>
+<script src="https://raw.github.com/nnnick/Chart.js/master/Chart.min.js"></script> 
+<script>
+ var ctx = $('#cc-rlsp-pie').get(0).getContext('2d');
+ var data = [{ value: 33906,
+               color: "#F38630",
+               label: 'bf:Works'},
+             { value: 33906,
+               color: "#E0E4CC",
+               label: 'bf:Instances'},
+             { value: 41402,
+               color: "#69D2E7",
+               label: 'bf:Persons'}];
+ var rlspPieChart = new Chart(ctx).Pie(data);
+</script>
+
+%rebase slide previous="/", next="bibframe-redis", page=page, slides=slides

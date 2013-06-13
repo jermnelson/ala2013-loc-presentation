@@ -1,4 +1,4 @@
-%include masthead category='misc'
+%include masthead category='misc', page='glossary', slides=slides
 
 <div class="hero-unit">
  <h2>Addendum</h2>

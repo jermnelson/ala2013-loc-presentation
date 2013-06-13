@@ -1,8 +1,9 @@
-%include masthead category='misc'
+%include masthead category='misc', page='contact', slides=slides
 
 <div class="hero-unit">
  <h2>Experimenting with Bibframe &amp; Redis</h2>
  <h1>Contact</h1>
+ <br>
  <div>
  <address>
   <strong>Jeremy Nelson</strong><br>

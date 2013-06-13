@@ -110,5 +110,7 @@
     <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-collapse.js"></script>
     <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-carousel.js"></script>
     <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-typeahead.js"></script>
+    <!-- For use on a single page apps -->
+    <script src="https://raw.github.com/nnnick/Chart.js/master/Chart.min.js"></script> 
   </body>
 </html>

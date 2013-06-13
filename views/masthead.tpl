@@ -18,11 +18,13 @@
        <i class="caret"></i>
     </a>
     <ul class="dropdown-menu" role="menu">
-     <li><a href="/redis-library-services-platform">Redis Library Services Platform</a></li>
-     <li><a href="/bibframe-redis">Bibframe Entities in Redis</a></li>
-     <li><a href="/marc21-ingestion">Ingesting MARC21 Records</a></li>
-     <li><a href="/mods-ingestion">Ingesting MODS Records</a></li>
-     <li><a href="/future">The Future: 4 Es + 1</a></li>
+     % for slide in slides:
+     <li
+       % if page == slide.get('name'):
+       class="active"
+       % end
+     ><a href="{{!slide.get('name')}}">{{!slide.get('headline')}}</a></li>
+     % end
     </ul>
   </li>
   <li
@@ -39,9 +41,21 @@
     <i class="caret"></i>
     </a>
     <ul class="dropdown-menu" role="menu">
-      <li><a href="/resources">Resources</a></li>
-      <li><a href="/glossary.html">Glossary</a></li>
-      <li><a href="/contact">Contact Information</a></li> 
+      <li
+      % if page == 'resources':
+      class="active"
+      % end
+      ><a href="/resources">Resources</a></li>
+      <li
+      % if page == 'glossary':
+      class="active"
+      % end
+      ><a href="/glossary.html">Glossary</a></li>
+      <li
+      % if page == 'contact':
+      class="active"
+      % end
+      ><a href="/contact">Contact Information</a></li> 
     </ul>
     </a>
   </li>

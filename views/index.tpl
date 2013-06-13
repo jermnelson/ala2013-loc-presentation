@@ -1,4 +1,4 @@
-%include masthead category='home'
+%include masthead category='home', page='home', slides=slides
 
 <div class="jumbotron">
  <h1>Experimenting with Bibframe &amp; Redis</h1>
@@ -16,26 +16,21 @@
 
 <div class="row-fluid marketing">
  <div class="span6">
-   <h4>Redis Library Services Platform (RLSP) <a href="/redis-library-services-platform"><i class="icon-fullscreen"></i></a></h4>
+   % for slide in slides[0:3]:
+   <h4>{{!slide.get('headline')}} <a href="/{{slide.get('name')}}"><i class="icon-fullscreen"></i></a></h4>
    <p>
-    {{ slide_descs.get('rlsp') }}
+    {{!slide.get('description')}}
    </p>
-
-   <h4>BIBFRAME Entities in Redis <a href="/bibframe-redis"><i class="icon-fullscreen"></i></a></h4>
-   <p>
-     {{ slide_descs.get('bibframe-redis') }}
-   </p>
-
-   <h4>MARC21 Ingestion into RLSP <a href="/marc21-ingestion"><i class="icon-fullscreen"></i></a></h4>
-   <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+   % end
  </div>
 
  <div class="span6">
-   <h4>Fedora Commons MODS Ingestion into RLSP <a href="/mods-ingestion"><i class="icon-fullscreen"></i></a></h4>
-   <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-   <h4>Future Directions <a href="/future"><i class="icon-fullscreen"></i></a></h4>
-   <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+   % for slide in slides[3:]:
+   <h4>{{!slide.get('headline')}} <a href="/{{slide.get('name')}}"><i class="icon-fullscreen"></i></a></h4>
+   <p>
+    {{!slide.get('description')}}
+   </p>
+   % end
 
    <h4>Addendum</a></h4>
    <a href="/resources">Resources</a> used in this presentation. A <a href="/glossary.html">Glossary</a> of

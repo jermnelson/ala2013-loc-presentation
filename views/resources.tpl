@@ -1,4 +1,4 @@
-%include masthead category='misc'
+%include masthead category='misc', page='resources', slides=slides
 <div class="row-fluid">
  <div class="span12 hero-unit">
    <h2>Addendum</h2>

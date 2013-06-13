@@ -1,6 +1,6 @@
 <div class="hero-unit">
  <h3>Experimenting with Bibframe &amp; Redis</h3>
- <h1 class="slide">The Future: Four Es + 1</h1>
+ <h1 class="slide">{{slides[4].get('headline')}}</h1>
 
 </div>
 
@@ -61,4 +61,4 @@
  </div>
 </div>
 
-%rebase slide previous="/mods-ingestion", next="/"
+%rebase slide previous="/mods-ingestion", next="/", page=page, slides=slides

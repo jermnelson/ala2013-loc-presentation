@@ -1,0 +1,46 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org", 
+    "slides": null
+  }, 
+  "creator": {
+    "@type": "Person", 
+    "additionalName": "Paul", 
+    "familyName": "Nelson", 
+    "givenName": "Jeremy"
+  }, 
+  "slides": [
+    {
+      "@type": "WebPage", 
+      "description": "The Redis Library Services Platform is made up of two open-source projects: the <a href=\"/glossary.html#ala\">Aristotle Library Apps</a> and the <a href=\"/glossary.html#bibframe-datastore\">Bibframe Datastore</a>.", 
+      "headline": "Redis Library Services Platform", 
+      "name": "rlsp"
+    }, 
+    {
+      "@type": "WebPage", 
+      "description": "Bibframe entities are represented in the Redis Library Services Platform as a collection of Redis key patterns. By convention, most Bibframe Entities core Redis key is associated with a Redis hash data primitive.", 
+      "headline": "Bibframe Entities in Redis", 
+      "name": "bibframe-redis"
+    }, 
+    {
+      "@type": "WebPage", 
+      "description": "Ingesting MARC21 records into BIBFRAME entities in the Redis Library Services Platform uses a number of <a href=\"/glossary.html#python\">Python</a> modules along with code from the Aristotle Library Apps project, a central part of the <a href=\"/glossary.html#rlsp\">Redis Library Service Platform</a>", 
+      "headline": "Ingesting MARC21 Records", 
+      "name": "marc21-ingestion"
+    }, 
+    {
+      "@type": "WebPage", 
+      "dateCreated": "2013-06-11", 
+      "description": "Using a MODS-to-MARC crosswalk, MODS metadata of Digital artifacts in a <a href=\"/glossary.html#fedora-commons\">Fedora Commons</a> repository are ingested as BIBFRAME entities in the <a href=\"/glossary.html#rlsp\">Redis Library Services Platform</a>.", 
+      "headline": "Ingesting MODS Records", 
+      "name": "mods-ingestion"
+    }, 
+    {
+      "@type": "WebPage", 
+      "dateCreated": "2013-06-11", 
+      "description": "The development road-map for the Redis Library Services Platform and Bibframe focuses on <strong>Engaging</strong> users, <strong>Enhancing</strong> user interfaces and functionality, <strong>Embrancing</strong> Bibframe and other vocabularies and schemas, <strong>Extending</strong> to use other software services and resources, and <strong>Experimenting</strong> with bibliographic, linked data, and semantic web technologies and services", 
+      "headline": "The Future: Four Es +1",
+      "name": "future"
+    }
+  ]
+}

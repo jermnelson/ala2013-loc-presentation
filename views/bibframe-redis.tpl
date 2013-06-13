@@ -1,8 +1,8 @@
 <div class="hero-unit">
  <h3>Experimenting with Bibframe &amp; Redis</h3>
- <h1 class="slide">Bibframe Entities in Redis</h1>  
+ <h1 class="slide">{{slides[1].get('headline') }}</h1>  
   <p class="lead">
-   {{ description }}
+   {{!slides[1].get('description')}}
   </p>
   </a>
 </div>
@@ -58,10 +58,11 @@
     <a href="/glossary.html#schema">schema.org</a> 
     metadata is linked to Bibframe entities using Redis key 
     structures and follows the practice of 
-    using namespaces to distinguish different vocabularies
+    Compact IRIs uses a prefix, most often the most common expressed 
+    namespaces to distinguish different vocabularies and schemas.
    </p>
   </div>
  </div>
 </div>
 
-%rebase slide previous="/redis-library-services-platform", next="/marc21-ingestion"
+%rebase slide previous="/redis-library-services-platform", next="/marc21-ingestion", page=page, slides=slides
