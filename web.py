@@ -7,6 +7,7 @@ __author__ = "Jeremy Nelson"
 import datetime
 import json
 import os
+import redis
 
 from bottle import template, request, route, run, static_file
 
@@ -17,6 +18,19 @@ PRESENTATION_INFO = json.load(open(os.path.join(PROJECT_ROOT,
                                    'rb'))
 SLIDES = PRESENTATION_INFO.get('slides')
 
+DEMO_REDIS = redis.StrictRedis(host='tuttdemo')
+
+@route('/assets/<type_of:path>/<filename:path>')
+def send_asset(type_of,filename):
+    local_path = os.path.join(PROJECT_ROOT,
+                              "assets",
+                              type_of,
+                              filename)
+    if os.path.exists(local_path):
+        return static_file(filename,
+			   root=os.path.join(PROJECT_ROOT,
+                                             "assets",
+                                             type_of))
 
 @route("/bibframe-redis")
 def bibframe_redis():
@@ -76,10 +90,19 @@ def mods_ingestion():
 @route("/rlsp")
 def rlsp():
     "Slide view for Redis Library Services Platform"
+    stats = [{'value': DEMO_REDIS.get('global bf:Work'),
+              'color': "#F38630"},
+             {'value': DEMO_REDIS.get('global bf:Instance'),
+              'color': "#E0E4CC"},
+             {'value': DEMO_REDIS.get('global bf:Person'),
+              'color': "#69D2E7"},
+             {'value': DEMO_REDIS.get('global bf:Organization'),
+              'color': '#00FF00'}]
     return template('rlsp',
                     category='slide',
                     page='rlsp',
-                    slides=SLIDES)
+                    slides=SLIDES,
+                    stats=stats)
 
 @route("/resources")
 def resources():

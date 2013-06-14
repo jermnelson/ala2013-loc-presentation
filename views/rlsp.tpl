@@ -71,18 +71,16 @@
 </div>
 
 <script src="http://twitter.github.io/bootstrap/assets/js/jquery.js"></script>
-<script src="https://raw.github.com/nnnick/Chart.js/master/Chart.min.js"></script> 
+<script src="https://raw.github.com/nnnick/Chart.js/master/Chart.min.js" type="text/javascript"></script> 
 <script>
  var ctx = $('#cc-rlsp-pie').get(0).getContext('2d');
- var data = [{ value: 33906,
-               color: "#F38630",
-               label: 'bf:Works'},
-             { value: 33906,
-               color: "#E0E4CC",
-               label: 'bf:Instances'},
-             { value: 41402,
-               color: "#69D2E7",
-               label: 'bf:Persons'}];
+ var data = [
+   % for stat in stats:
+   {"value": {{ stat.get('value') }},
+    "color": "{{ stat.get('color') }}" },
+   % end
+   ];
+    
  var rlspPieChart = new Chart(ctx).Pie(data);
 </script>
 
