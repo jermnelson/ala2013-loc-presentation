@@ -91,12 +91,16 @@ def mods_ingestion():
 def rlsp():
     "Slide view for Redis Library Services Platform"
     stats = [{'value': DEMO_REDIS.get('global bf:Work'),
+              'name': 'bf:Works',
               'color': "#F38630"},
              {'value': DEMO_REDIS.get('global bf:Instance'),
+              'name': 'bf:Instances',
               'color': "#E0E4CC"},
              {'value': DEMO_REDIS.get('global bf:Person'),
+              'name': 'bf:Persons',
               'color': "#69D2E7"},
              {'value': DEMO_REDIS.get('global bf:Organization'),
+              'name': 'bf:Organizations',
               'color': '#00FF00'}]
     return template('rlsp',
                     category='slide',

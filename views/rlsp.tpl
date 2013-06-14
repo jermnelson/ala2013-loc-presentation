@@ -52,26 +52,19 @@
     <tr>
    </thead>
    <tbody>
+   % for stat in stats:
     <tr>
-     <td><strong>bf:Works</strong></td>
-     <td style="background-color: #F38630">33,906</td>
+     <td><strong>{{ stat.get('name') }}</strong></td>
+     <td style="background-color: {{ stat.get('color') }}"> {{ stat.get('value') }}</td>
     </tr>
-    <tr>
-     <td><strong>bf:Instances</strong></td>
-     <td style="background-color: #E0E4CC">33,906</td>
-    </tr>  
-    <tr>
-     <td><strong>bf:Persons</strong></td>
-     <td style="background-color: #69D2E7">41,402</td>
-
-    </tr> 
+   % end
    </tbody>
   </table>
  </div>
 </div>
 
 <script src="http://twitter.github.io/bootstrap/assets/js/jquery.js"></script>
-<script src="https://raw.github.com/nnnick/Chart.js/master/Chart.min.js" type="text/javascript"></script> 
+<script src="/assets/js/Chart.min.js" type="text/javascript"></script> 
 <script>
  var ctx = $('#cc-rlsp-pie').get(0).getContext('2d');
  var data = [
