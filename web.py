@@ -18,7 +18,7 @@ PRESENTATION_INFO = json.load(open(os.path.join(PROJECT_ROOT,
                                    'rb'))
 SLIDES = PRESENTATION_INFO.get('slides')
 
-DEMO_REDIS = redis.StrictRedis(port=6380)
+DEMO_REDIS = redis.StrictRedis(host='li-b82p6v1-1208', port=6380)
 
 @route('/assets/<type_of:path>/<filename:path>')
 def send_asset(type_of,filename):
@@ -104,6 +104,7 @@ def rlsp():
                         ('MovingImage', "#00FF00"),
                         ('NotatedMusic', "#EEBBEE"),
                         ('MusicalAudio', "#223344"),
+                        ('Map', '#DD33AA'),
                         ('NonmusicalAudio', "#AA66AA"),
                         ('SoftwareOrMultimedia', "BBBBBB"),
                         ('Instance', "#E0E4CC"),

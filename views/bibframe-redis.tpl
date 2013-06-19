@@ -16,9 +16,14 @@
    <p>Example of a Moving Image Creative Work, in this case the
       199x movie version of <em>Pride and Prejudice</em>
    </p>
-   <code>
+   <code style="font-size: 1.3em">
      redis_datastore.hgetall('{{ creative_wrk_key }}')
    </code>
+   <p>
+   <input type="text" value="{{ creative_wrk_key }}" >
+   <a href="#" data-toggle>
+   </form>
+   </p>
   </div>
   <div>
    <h4>Instance Entity - <em>{{ instance_key }}</em></h4>
@@ -64,5 +69,15 @@
   </div>
  </div>
 </div>
+
+<div class="modal hide fade" id="redis-result">
+ 
+
+</div>
+
+<script src="http://twitter.github.io/bootstrap/assets/js/jquery.js"></script>
+<script>
+
+</script>
 
 %rebase slide previous="/redis-library-services-platform", next="/marc21-ingestion", page=page, slides=slides
