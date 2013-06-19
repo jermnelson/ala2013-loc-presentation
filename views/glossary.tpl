@@ -2,7 +2,7 @@
 
 <div class="hero-unit">
  <h2>Addendum</h2>
- <h1>Glossary</h1>
+ <h1 class="slide">Glossary</h1>
  <p class="lead">
   Glossary of terms, concepts, and acronyms used in this presentation.
  </p> 

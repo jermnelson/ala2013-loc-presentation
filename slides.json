@@ -30,11 +30,19 @@
     }, 
     {
       "@type": "WebPage", 
-      "dateCreated": "2013-06-11", 
-      "description": "Using a MODS-to-MARC crosswalk, MODS metadata of Digital artifacts in a <a href=\"/glossary.html#fedora-commons\">Fedora Commons</a> repository are ingested as BIBFRAME entities in the <a href=\"/glossary.html#rlsp\">Redis Library Services Platform</a>.", 
+      "dateCreated": "2013-06-11",
+      "dateModified": "2013-06-19", 
+      "description": "Using a MODS-to-MARC crosswalk, MODS metadata of Digital artifacts in a <a href=\"/glossary.html#fedora-commons\">Fedora Commons</a> repository are ingested as BIBFRAME entities in the <a href=\"/glossary.html#RLSP\">Redis Library Services Platform</a>.", 
       "headline": "Ingesting MODS Records", 
       "name": "mods-ingestion"
     }, 
+     {
+      "@type": "WebPage", 
+      "dateCreated": "2013-06-19",
+      "description": "Project Gutenberg provides <a href=\"/glossary.html#RDF\">RDF</a> records for each work in their corpus of online ebooks. Using XPath, these rdf records were ingested as Bibframe entities in the <a href=\"/glossary.html#RLSP\">Redis Library Services Platform</a>.",
+      "headline": "Ingesting Project Gutenberg Records",
+      "name": "pg-rdf-ingestion"
+    },
     {
       "@type": "WebPage", 
       "dateCreated": "2013-06-11", 

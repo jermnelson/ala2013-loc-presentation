@@ -63,6 +63,74 @@
  </div>
 </div>
 
+<hr>
+
+<div class="row-fluid marketing">
+ <div class="span6">
+  <a href="#rlsp-basic" 
+     data-toggle="modal" 
+     class="btn btn-large btn-inverse"><h3>Basic Redis Datastore</h3></a>
+ </div>
+ <div class="span6">
+  <a href="#rlsp-cluster" 
+     data-toggle="modal" 
+     class="btn btn-large btn-success"><h3>Redis Cluster Datastore</h3></a>
+ </div>
+</div>
+
+<div class="modal hide fade" id="rlsp-basic">
+ <div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  <h2>Basic Redis Datastore</h2>
+ </div>
+ <div class="modal-body">
+  <ul class="lead">
+   <li>Uses one Redis Instance for bibliographic and operational data</li>
+   <li>Quickest method for launching a working Redis Library Services Platform</li>
+   <li>Scales to memory limitations of Redis</li>
+ <h4>Examples</h4>
+  <dl class="lead">
+    <dt>Colorado College Production</dt>
+    <dd>
+     <a href="http://discovery.coloradocollege.edu/apps/">http://discovery.coloradocollege.edu/apps/</a>
+    </dd>
+    <dt>Prospector Consortium Demo</dt>
+    <dd>
+     <a href="http://tuttdemo.coloradocollege.edu/">http://tuttdemo.coloradocollege.edu</a>
+    </dd>
+  </dl>
+ </div>
+ <div class="modal-footer">
+  <a class="btn btn-primary" data-dismiss="modal">Close</a>
+ </div>
+</div>
+
+<div class="modal hide fade" id="rlsp-cluster">
+ <div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  <h2>Redis Cluster Datastore</h2>
+ </div>
+ <div class="modal-body">
+  <ul class="lead">
+   <li>Uses multiple Redis Instances running on one or more machines</li>
+   <li>Each Redis Instance has a shard of the total number of Redis keys</li>
+   <li>Current implementation uses client-sharding strategy similar to 
+       <a href="#">Craigslist</a> with the 
+       <a href="#">rediscluser</a> python module</li>
+  </ul>
+  <h4>Example: Tutt Library TLC1 Clusters</h4>
+  <ul class="lead">
+    <li>Spare computing cycles of an always on instruction lab with the multi-core
+        PC workstations with multiple gig RAM, sit idle most of the time</li>
+    <li>Uses Microsoft's port of <a href="#">Redis</a> to run Redis instance on each
+        workstation in the background</li>
+  </ul>
+ </div>
+ <div class="modal-footer">
+  <a class="btn btn-primary" data-dismiss="modal">Close</a>
+ </div>
+</div>
+
 <script src="http://twitter.github.io/bootstrap/assets/js/jquery.js"></script>
 <script src="/assets/js/Chart.min.js" type="text/javascript"></script> 
 <script>

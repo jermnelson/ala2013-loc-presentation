@@ -1,6 +1,6 @@
 <div class="hero-unit">
  <h3>Experimenting with Bibframe &amp; Redis</h3>
- <h1 class="slide">{{slides[4].get('headline')}}</h1>
+ <h1 class="slide">{{slides[5].get('headline')}}</h1>
 
 </div>
 
@@ -61,4 +61,4 @@
  </div>
 </div>
 
-%rebase slide previous="/mods-ingestion", next="/", page=page, slides=slides
+%rebase slide previous="/pg-rdf-ingestion", next="/", page=page, slides=slides

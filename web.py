@@ -18,7 +18,7 @@ PRESENTATION_INFO = json.load(open(os.path.join(PROJECT_ROOT,
                                    'rb'))
 SLIDES = PRESENTATION_INFO.get('slides')
 
-DEMO_REDIS = redis.StrictRedis(host='tuttdemo')
+DEMO_REDIS = redis.StrictRedis(port=6380)
 
 @route('/assets/<type_of:path>/<filename:path>')
 def send_asset(type_of,filename):
@@ -85,23 +85,35 @@ def mods_ingestion():
                     category='slide',
                     page='mods-ingestion',
                     slides=SLIDES)
+@route("/pg-rdf-ingestion")
+def pg_rdf_ingestion():
+    "Slide view for Project Gutenberg RDF Ingestion into RLSP"
+    return template('pg-rdf-ingestion',
+                    category='slide',
+                    page='pg-rdf-ingestion',
+                    slides=SLIDES)
+
 
 @route("/redis-library-services-platform")
 @route("/rlsp")
 def rlsp():
     "Slide view for Redis Library Services Platform"
-    stats = [{'value': DEMO_REDIS.get('global bf:Work'),
-              'name': 'bf:Works',
-              'color': "#F38630"},
-             {'value': DEMO_REDIS.get('global bf:Instance'),
-              'name': 'bf:Instances',
-              'color': "#E0E4CC"},
-             {'value': DEMO_REDIS.get('global bf:Person'),
-              'name': 'bf:Persons',
-              'color': "#69D2E7"},
-             {'value': DEMO_REDIS.get('global bf:Organization'),
-              'name': 'bf:Organizations',
-              'color': '#00FF00'}]
+    stats =[]
+    for name, color in [('Book', "#F38630"),
+                        ('Manuscript', "#BB4422"),
+                        ('MovingImage', "#00FF00"),
+                        ('NotatedMusic', "#EEBBEE"),
+                        ('MusicalAudio', "#223344"),
+                        ('NonmusicalAudio', "#AA66AA"),
+                        ('SoftwareOrMultimedia', "BBBBBB"),
+                        ('Instance', "#E0E4CC"),
+                        ('Person', "#69D2E7"),
+                        ('Organization', "#AA7766")]:
+        key = 'bf:{0}'.format(name)
+        stats.append({'value': DEMO_REDIS.get('global {0}'.format(key)),
+                      'name': '{0}s'.format(name),
+                      'color': color})
+   
     return template('rlsp',
                     category='slide',
                     page='rlsp',
