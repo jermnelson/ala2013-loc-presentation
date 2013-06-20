@@ -9,7 +9,7 @@ import json
 import os
 import redis
 
-from bottle import template, request, route, run, static_file
+from bottle import abort, template, request, route, run, static_file
 
 PROJECT_ROOT = os.path.split(os.path.abspath(__name__))[0]
 
@@ -19,6 +19,18 @@ PRESENTATION_INFO = json.load(open(os.path.join(PROJECT_ROOT,
 SLIDES = PRESENTATION_INFO.get('slides')
 
 DEMO_REDIS = redis.StrictRedis(host='li-b82p6v1-1208', port=6380)
+
+# A list of safe commands for access Redis server directly from the
+# presentation
+SAFE_COMMANDS = ['exists',
+                 'hget',
+                 'hgetall',
+                 'hlen',
+                 'scard',
+                 'smembers',
+                 'zcount'
+                 'zrange']
+
 
 @route('/assets/<type_of:path>/<filename:path>')
 def send_asset(type_of,filename):
@@ -42,7 +54,7 @@ def bibframe_redis():
                     facet_annotation_key='bf:Annotation:Facet:1',
                     holding_key='bf:Holding:234',
                     instance_key='bf:Instance:1',
-                    person_key='bf:Person:890',
+                    person_key='bf:Person:11',
                     page='bibframe-redis',
                     slides=SLIDES)
 
@@ -93,6 +105,23 @@ def pg_rdf_ingestion():
                     page='pg-rdf-ingestion',
                     slides=SLIDES)
 
+@route("/redis")
+def redis_commands():
+    "AJAX interface to the demo redis datastore"
+    command = request.query.command
+    redis_key = request.query.key
+    if SAFE_COMMANDS.count(command) == 0:
+        abort(403, "{0} not allowed".format(command))
+    if len(redis_key) > 0:
+        print("Command is {0} {1}".format(command, redis_key))
+        result = getattr(DEMO_REDIS, command)(redis_key)
+    else:
+        result = getattr(DEMO_REDIS, command)()
+    if type(result) == set:
+        result = list(result)
+    return json.dumps(result)
+        
+    
 
 @route("/redis-library-services-platform")
 @route("/rlsp")

@@ -12,39 +12,48 @@
 <div class="row-fluid marketing">
  <div class="span8">
   <div>
-   <h4>Creative Work Entity - <em>bf:MovingImage:1</em></h4>
+   <h4>Creative Work Entity - <em>{{ creative_wrk_key }}</em></h4>
    <p>Example of a Moving Image Creative Work, in this case the
       199x movie version of <em>Pride and Prejudice</em>
    </p>
-   <code style="font-size: 1.3em">
+   <p>
+   <code 
+         data-bind="click: runHGETALL.bind($data, '{{ creative_wrk_key }}')">
      redis_datastore.hgetall('{{ creative_wrk_key }}')
    </code>
-    <a href="#rlsp-result" 
-       data-bind="click: runHGETALL.bind($data, 
-                                         '{{ creative_wrk_key }}')"
-       class="btn btn-danger">Run</a>
+   </p>
+   <h4>Set of RDA creator redis keys - 
+      <em>{{ creative_wrk_key }}:rda:isCreatedBy')</em></h4> 
+   <p>
+   <code  
+        data-bind="click: runSMEMBERS.bind($data, '{{ creative_wrk_key }}:rda:isCreatedBy')">
+     redis_datastore.smembers('{{ creative_wrk_key }}:rda:isCreatedBy')
+   </code>
+   </p>
+   <h4>Person Entity - <em>{{ person_key }}</em>
+   <p>
+   <code 
+         data-bind="click: runHGETALL.bind($data, '{{ person_key }}')">
+     redis_datastore.hgetall('{{ person_key }}')
+   </code>
+   </p>
   </div>
   <div>
    <h4>Instance Entity - <em>{{ instance_key }}</em></h4>
-   <code>
+   <code data-bind="click: runHGETALL.bind($data, '{{ instance_key }}')">
     redis_datastore.hgetall('{{ instance_key }}') 
    </code>
+       
   </div>
   <div>
    <h4>Cover Art Entity - <strong>{{ cover_art_key }}</strong></h4>
-   <code>
+   <code data-bind="click: runHGETALL.bind($data, '{{ cover_art_key }}')">
      redis_datastore.hgetall('{{ cover_art_key }}')
    </code>
   </div>
   <div>
-   <h4>Person - <strong>{{ person_key }}</strong></h4>
-   <code>
-     redis_datastore.hgetall('{{ person_key }}')
-   </code>
-  </div>
-  <div>
    <h4>Library Holding - <strong>{{ holding_key }}</strong></h4>
-   <code>
+   <code data-bind="click: runHGETALL.bind($data, '{{ holding_key }}')">
      redis_datastore.hgetall('{{ holding_key }}')
    </code>
   </div>
@@ -72,38 +81,66 @@
 <div class="modal hide fade" id="redis-result">
  <div class="modal-header">
   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-   <h2>Result of <span id="redis-command"
-                       data-bind="text: redisCommand"></h2>
- </div>
+   <h2>Result of Redis Command</h2>
+   </div>
  <div class="modal-body">
-  <code style="font-size: 1.3em" 
-        data-bind="text: redisResult"></code>
+  <h3 style="color: red"
+      data-bind="text: redisCommand"></h3>
+
+  <pre class="pre-scollable" style="font-size: 1.3em" 
+
+        data-bind="html: redisResult"></pre>
  </div>
  <div class="modal-footer">
   <a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>
  </div>
 </div>
 
-<script src="http://twitter.github.io/bootstrap/assets/js/jquery.js"></script>
+<script src="/assets/js/jquery.js"></script>
+<script src="/assets/js/bootstrap.js"></script>
 <script src="/assets/js/knockout.js"></script>
 <script type="text/javascript">
+ $('.modal').css({
+  width: 'auto',
+  'margin-left': function () {
+     return -($(this).width() / .75);
+  },
+  'margin-right': function() {
+     return ($(this).width() /2 );
+ }
+ });
+
  function BibframeRedisViewModal() {
   var self = this;
-  var redisCommand = "";
-  var redisResult = "";
+  self.redisCommand = ko.observable();
+  self.redisResult =  ko.observable();
 
   // AJAX call sends hash Redis Key to RSLP and display
   // result in modal  
-  runHGETALL: function(data, redis_key) {
-    self.redisCommand = "redis_datastore.hgetall('" + redis_key + "')";  
+  self.runHGETALL = function(redis_key) {
+    var command = "redis_datastore.hgetall('" + redis_key + "')";  
+    self.redisCommand(command);  
     $.ajax({
       data: "command=hgetall&key=" + redis_key,
       url: "/redis",
       success: function(result) {
-       self.redisResult = result;
-       $('#redis-result').modal('show');
-    
+       self.redisResult(result);
+       $("#redis-result").modal('show');
       }
+    });
+  }
+
+  self.runSMEMBERS = function(redis_key) {
+    var command = "redis_datastore.smembers('" + redis_key + "')";
+    self.redisCommand(command);
+    $.ajax({
+      data: "command=smembers&key=" + redis_key,
+      url: "/redis",
+      success: function(result) {
+       self.redisResult(result);
+       $("#redis-result").modal('show');
+      }
+    });
   }
  }
 
