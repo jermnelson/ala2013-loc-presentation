@@ -22,7 +22,7 @@
    <li><i class="icon-li icon-arrow-right"></i>Based on <a href="/glossary.html#django">Django</a></li>
    <li><i class="icon-li icon-arrow-right"></i>Interfaces with <a href="/glossary.html#redis">Redis datastore</a></li>
    <li><i class="icon-li icon-arrow-right"></i><a href="/glossary.html#solr">Solr</a> text indexer </li>
-   <li><i class="icon-li icon-arrow-right"></i><a href="/glossary.html#fedora">Fedora commons</a> digital repository 
+   <li><i class="icon-li icon-arrow-right"></i><a href="/glossary.html#fedora-commons">Fedora commons</a> digital repository 
    software.</li>
   </ul>
  </div>

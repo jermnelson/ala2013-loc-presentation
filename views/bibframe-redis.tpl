@@ -11,7 +11,7 @@
 
 <div class="row-fluid marketing">
  <div class="span8">
-<div>
+  <div>
    <h4>Creative Work Entity - <em>bf:MovingImage:1</em></h4>
    <p>Example of a Moving Image Creative Work, in this case the
       199x movie version of <em>Pride and Prejudice</em>
@@ -19,11 +19,10 @@
    <code style="font-size: 1.3em">
      redis_datastore.hgetall('{{ creative_wrk_key }}')
    </code>
-   <p>
-   <input type="text" value="{{ creative_wrk_key }}" >
-   <a href="#" data-toggle>
-   </form>
-   </p>
+    <a href="#rlsp-result" 
+       data-bind="click: runHGETALL.bind($data, 
+                                         '{{ creative_wrk_key }}')"
+       class="btn btn-danger">Run</a>
   </div>
   <div>
    <h4>Instance Entity - <em>{{ instance_key }}</em></h4>
@@ -71,12 +70,44 @@
 </div>
 
 <div class="modal hide fade" id="redis-result">
- 
-
+ <div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+   <h2>Result of <span id="redis-command"
+                       data-bind="text: redisCommand"></h2>
+ </div>
+ <div class="modal-body">
+  <code style="font-size: 1.3em" 
+        data-bind="text: redisResult"></code>
+ </div>
+ <div class="modal-footer">
+  <a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>
+ </div>
 </div>
 
 <script src="http://twitter.github.io/bootstrap/assets/js/jquery.js"></script>
-<script>
+<script src="/assets/js/knockout.js"></script>
+<script type="text/javascript">
+ function BibframeRedisViewModal() {
+  var self = this;
+  var redisCommand = "";
+  var redisResult = "";
+
+  // AJAX call sends hash Redis Key to RSLP and display
+  // result in modal  
+  runHGETALL: function(data, redis_key) {
+    self.redisCommand = "redis_datastore.hgetall('" + redis_key + "')";  
+    $.ajax({
+      data: "command=hgetall&key=" + redis_key,
+      url: "/redis",
+      success: function(result) {
+       self.redisResult = result;
+       $('#redis-result').modal('show');
+    
+      }
+  }
+ }
+
+ ko.applyBindings(new BibframeRedisViewModal());
 
 </script>
 
