@@ -5,7 +5,7 @@
   <p class="lead">
    Jeremy Nelson<br>
    Metadata and Systems Librarian<br>
-   Colorado College
+   <a href="http://www.coloradocollege.edu/"><img alt="Colorado College Logo" src="/assets/img/cclogo-gold.jpg"></a>
   </p>
   <a class="btn btn-large btn-success" href="/redis-library-services-platform">
     <i class="icon-play icon-2x"></i>

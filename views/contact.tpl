@@ -3,6 +3,11 @@
 <div class="hero-unit">
  <h2>Addendum</h2>
  <h1 class="slide">Contact</h1>
+ <img src="/assets/img/jeremy-nelson-aikido-2012.png"
+      class="img-polaroid"
+      style="float:right" 
+      title="Jeremy Nelson -- 2012 Aikido Summer Camp in the Rockies"/>
+
  <br>
  <div>
  <address>
