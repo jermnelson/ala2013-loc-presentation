@@ -165,7 +165,7 @@ def index():
     return template('index',
                     category='home',
                     slides=SLIDES)
-FLUP = True
+FLUP = False
 if FLUP is True:
     run(server=FlupFCGIServer,
         host='0.0.0.0',

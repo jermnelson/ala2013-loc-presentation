@@ -4,7 +4,7 @@
    % if category == 'home':
    class="active"
    % end
-   ><a href="/">Home</a></li>
+   ><a href="/ala2013/">Home</a></li>
   <li
    % if category == 'slide':
     class="dropdown active"

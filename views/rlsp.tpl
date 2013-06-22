@@ -14,17 +14,22 @@
  <div class="span6">
   <h2>Aristotle Library Apps</h2>
   <p class="lead">
-   Designed as loosely coupled single-page <a href="/glossary.html#html5">HTML5</a> apps
+   Designed as loosely coupled single-page <a href="/ala2013/glossary.html#html5">HTML5</a> apps
    targeting mobile and tablet user-interfaces with progessie enhancements for full-desktop
    web browsers and network speeds.
   </p>
   <ul class="icons-ul lead">
-   <li><i class="icon-li icon-arrow-right"></i>Based on <a href="/glossary.html#django">Django</a></li>
-   <li><i class="icon-li icon-arrow-right"></i>Interfaces with <a href="/glossary.html#redis">Redis datastore</a></li>
-   <li><i class="icon-li icon-arrow-right"></i><a href="/glossary.html#solr">Solr</a> text indexer </li>
-   <li><i class="icon-li icon-arrow-right"></i><a href="/glossary.html#fedora-commons">Fedora commons</a> digital repository 
+   <li><i class="icon-li icon-arrow-right"></i>Based on <a href="/ala2013/glossary.html#django">Django</a></li>
+   <li><i class="icon-li icon-arrow-right"></i>Interfaces with <a href="/ala2013/glossary.html#redis">Redis datastore</a></li>
+   <li><i class="icon-li icon-arrow-right"></i><a href="/ala2013/glossary.html#solr">Solr</a> text indexer </li>
+   <li><i class="icon-li icon-arrow-right"></i><a href="/ala2013/glossary.html#fedora-commons">Fedora commons</a> digital repository 
    software.</li>
   </ul>
+  <div class="alert alert-primary">
+   All source code is licensed under the Apache 2 and is available at this Github repository: 
+   <a href="https://github.com/jermnelson/aristotle-library-apps">https://github.com/jermnelson/aristotle-library-apps</a>
+  </div>
+
  </div>
 
  <div class="span6">
@@ -33,6 +38,10 @@
      on running Redis as a bibliographic and operational datastore as single instance or as a 
      cluster of Redis instances.
   </p> 
+  <div class="alert alert-info">
+   All source code is licensed under the GPLv2 and is available at this Github repository: 
+   <a href="https://github.com/jermnelson/BIBFRAME-Datastore">https://github.com/jermnelson/BIBFRAME-Datastore</a>
+  </div>
   </div>
 </div>
 
@@ -145,4 +154,4 @@
  var rlspPieChart = new Chart(ctx).Pie(data);
 </script>
 
-%rebase slide previous="/", next="bibframe-redis", page=page, slides=slides
+%rebase slide previous="/ala2013/", next="/ala2013/bibframe-redis", page=page, slides=slides

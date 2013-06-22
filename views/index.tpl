@@ -5,9 +5,9 @@
   <p class="lead">
    Jeremy Nelson<br>
    Metadata and Systems Librarian<br>
-   <a href="http://www.coloradocollege.edu/"><img alt="Colorado College Logo" src="/assets/img/cclogo-gold.jpg"></a>
+   <a href="http://www.coloradocollege.edu/"><img alt="Colorado College Logo" src="/ala2013/assets/img/cclogo-gold.jpg"></a>
   </p>
-  <a class="btn btn-large btn-success" href="/redis-library-services-platform">
+  <a class="btn btn-large btn-success" href="/ala2013/redis-library-services-platform">
     <i class="icon-play icon-2x"></i>
   </a>
 </div>
@@ -17,7 +17,7 @@
 <div class="row-fluid marketing">
  <div class="span6">
    % for slide in slides[0:3]:
-   <h4>{{!slide.get('headline')}} <a href="/{{slide.get('name')}}"><i class="icon-fullscreen"></i></a></h4>
+   <h4>{{!slide.get('headline')}} <a href="/ala2013/{{slide.get('name')}}"><i class="icon-fullscreen"></i></a></h4>
    <p>
     {{!slide.get('description')}}
    </p>
@@ -26,7 +26,7 @@
 
  <div class="span6">
    % for slide in slides[3:]:
-   <h4>{{!slide.get('headline')}} <a href="/{{slide.get('name')}}"><i class="icon-fullscreen"></i></a></h4>
+   <h4>{{!slide.get('headline')}} <a href="/ala2013/{{slide.get('name')}}"><i class="icon-fullscreen"></i></a></h4>
    <p>
     {{!slide.get('description')}}
    </p>

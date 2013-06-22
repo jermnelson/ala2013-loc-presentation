@@ -52,12 +52,20 @@
    </code>
   </div>
   <div>
-   <h4>Library Holding - <strong>{{ holding_key }}</strong></h4>
+   <h4>Library Holding - <em>{{ holding_key }}</strong></h4>
    <code data-bind="click: runHGETALL.bind($data, '{{ holding_key }}')">
      redis_datastore.hgetall('{{ holding_key }}')
    </code>
   </div>
-
+  <hr>
+  <h3>Aggregate Keys</h3>
+  <div>
+   <h4>ILS Bibliographic Hash - <em>ils-bib-numbers</em></h4>
+   <code>
+    redis_datastore.hlen('ils-bib-numbers')
+   </code>
+  
+  </div>
  </div>
 
  <div class="span4">
@@ -122,7 +130,7 @@
     self.redisCommand(command);  
     $.ajax({
       data: "command=hgetall&key=" + redis_key,
-      url: "/code4lib/redis",
+      url: "/ala2013/redis",
       success: function(result) {
        self.redisResult(result);
        $("#redis-result").modal('show');
@@ -135,7 +143,7 @@
     self.redisCommand(command);
     $.ajax({
       data: "command=smembers&key=" + redis_key,
-      url: "/redis",
+      url: "/ala2013/redis",
       success: function(result) {
        self.redisResult(result);
        $("#redis-result").modal('show');
@@ -148,4 +156,4 @@
 
 </script>
 
-%rebase slide previous="/redis-library-services-platform", next="/marc21-ingestion", page=page, slides=slides
+%rebase slide previous="/ala2013/redis-library-services-platform", next="/ala2013/marc21-ingestion", page=page, slides=slides

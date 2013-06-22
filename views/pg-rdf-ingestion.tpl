@@ -11,7 +11,7 @@
 <div class="row-fluid marketing">
  <div class="span7">
   <div class="well well-small">
-    <h3>Ingests 44,xxx Project Gutenberg RDF files</h3>
+    <h3>Ingests 42,379 Project Gutenberg RDF files</h3>
     <p class="lead">For first stable release,  libraries will
         have the option to seed their local RLSP datastore with these records 
         during installation.
