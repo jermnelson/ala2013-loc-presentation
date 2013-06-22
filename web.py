@@ -10,6 +10,7 @@ import os
 import redis
 
 from bottle import abort, template, request, route, run, static_file
+from bottle import FlupFCGIServer
 
 PROJECT_ROOT = os.path.split(os.path.abspath(__name__))[0]
 
@@ -32,7 +33,7 @@ SAFE_COMMANDS = ['exists',
                  'zrange']
 
 
-@route('/assets/<type_of:path>/<filename:path>')
+@route('/ala2013/assets/<type_of:path>/<filename:path>')
 def send_asset(type_of,filename):
     local_path = os.path.join(PROJECT_ROOT,
                               "assets",
@@ -44,7 +45,7 @@ def send_asset(type_of,filename):
                                              "assets",
                                              type_of))
 
-@route("/bibframe-redis")
+@route("/ala2013/bibframe-redis")
 def bibframe_redis():
     "Slide view for BIBFRAME Entities in Redis" 
     return template('bibframe-redis',
@@ -58,7 +59,7 @@ def bibframe_redis():
                     page='bibframe-redis',
                     slides=SLIDES)
 
-@route("/contact")
+@route("/ala2013/contact")
 def contact():
     "Contact information"
     return template('contact',
@@ -66,7 +67,7 @@ def contact():
                     page='contact',
                     slides=SLIDES)
 
-@route("/future")
+@route("/ala2013/future")
 def future():
     "Future plans"
     return template('future',
@@ -74,7 +75,7 @@ def future():
                     page='future',
                     slides=SLIDES)
 
-@route("/glossary.html")
+@route("/ala2013/glossary.html")
 def glossary():
     "Glossary view"
     return template('glossary',
@@ -82,7 +83,7 @@ def glossary():
                     page='glossary',
                     slides=SLIDES)
 
-@route("/marc21-ingestion")
+@route("/ala2013/marc21-ingestion")
 def marc21_ingestion():
     "Slide view for MARC21 Ingestion into RLSP"
     return template('marc21-ingestion',
@@ -90,14 +91,14 @@ def marc21_ingestion():
                     page='marc21-ingestion',
                     slides=SLIDES)
 
-@route("/mods-ingestion")
+@route("/ala2013/mods-ingestion")
 def mods_ingestion():
     "Slide view for Fedora Commons MODS Ingestion into RLSP"
     return template('mods-ingestion',
                     category='slide',
                     page='mods-ingestion',
                     slides=SLIDES)
-@route("/pg-rdf-ingestion")
+@route("/ala2013/pg-rdf-ingestion")
 def pg_rdf_ingestion():
     "Slide view for Project Gutenberg RDF Ingestion into RLSP"
     return template('pg-rdf-ingestion',
@@ -105,7 +106,7 @@ def pg_rdf_ingestion():
                     page='pg-rdf-ingestion',
                     slides=SLIDES)
 
-@route("/redis")
+@route("/ala2013/redis")
 def redis_commands():
     "AJAX interface to the demo redis datastore"
     command = request.query.command
@@ -123,8 +124,8 @@ def redis_commands():
         
     
 
-@route("/redis-library-services-platform")
-@route("/rlsp")
+@route("/ala2013/redis-library-services-platform")
+@route("/ala2013/rlsp")
 def rlsp():
     "Slide view for Redis Library Services Platform"
     stats =[]
@@ -150,7 +151,7 @@ def rlsp():
                     slides=SLIDES,
                     stats=stats)
 
-@route("/resources")
+@route("/ala2013/resources")
 def resources():
     "Resource view"
     return template('resources',
@@ -158,11 +159,18 @@ def resources():
                     page='resources',
                     slides=SLIDES)
 
-@route("/")
+@route("/ala2013/")
 def index():
     record_sets = {}
     return template('index',
                     category='home',
                     slides=SLIDES)
-
-run(host='localhost', port=8013, reloader=True)
+FLUP = True
+if FLUP is True:
+    run(server=FlupFCGIServer,
+        host='0.0.0.0',
+        port=8013)
+else:
+    run(host='0.0.0.0', 
+        port=8013, 
+        reloader=True)

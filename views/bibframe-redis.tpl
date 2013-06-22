@@ -96,9 +96,9 @@
  </div>
 </div>
 
-<script src="/assets/js/jquery.js"></script>
-<script src="/assets/js/bootstrap.js"></script>
-<script src="/assets/js/knockout.js"></script>
+<script src="/ala2013/assets/js/jquery.js"></script>
+<script src="/ala2013/assets/js/bootstrap.js"></script>
+<script src="/ala2013/assets/js/knockout.js"></script>
 <script type="text/javascript">
  $('.modal').css({
   width: 'auto',
@@ -122,7 +122,7 @@
     self.redisCommand(command);  
     $.ajax({
       data: "command=hgetall&key=" + redis_key,
-      url: "/redis",
+      url: "/code4lib/redis",
       success: function(result) {
        self.redisResult(result);
        $("#redis-result").modal('show');
