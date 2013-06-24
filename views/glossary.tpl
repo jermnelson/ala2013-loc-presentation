@@ -11,24 +11,16 @@
  <div class="span5 well">
   <h3>A through M</h3>
   <dl>
-   <dt><a name="AACR2"></a>AACR2</a></dt>
-   <dd>
-    An acronym for <a href="http://www.aacr2.org">Anglo-American Cataloging Rules 2nd Edition</a> the 
-    current bibliographic cataloging practices used by most libraries in some form or another
-    for cataloging material into the <a href="#MARC21">MARC21</a> bibliographic data format. 
-   </dd>
-   <dt><a name="ALA"></a>ALA</dt>
-   <dd>
-    The <a href="http://www.ala.org">American Library Association</a> is the largest library
-    professional organization that is actively involved in most areas of library operations.
-   </dd>
    <dt><a name="Annotation"></a>Annotation</dt>
    <dd>
-    A core <a href="#BIBFRAME">BIBFRAME</a> class ...
+    A core <a href="#BIBFRAME">BIBFRAME</a> class that through its subclasses, associates
+    data with other resources. 
    </dd>
    <dt><a name="aristotle-library-apps"></a>Aristotle Library Apps</dt>
    <dd>
-    An open-source project that 
+    A <a href="#django">Django</a>-based open-source project that uses Twitter's Bootstrap to
+    create public and staff <a href="#HTML5">HTML5</a> apps that interacts with a bibliographic  
+    <a href="#BIBFRAME-Datastore">Redis datastore</a>.
    </dd>
    <dt><a name="authority"></a>Authority</dt>
    <dd>
@@ -72,43 +64,20 @@
     <a href="https://www.djangoproject.com/">Django</a> is an a <a href="#Python">Python</a>-based web framework that is used
     in the <a href="#">Aristotle Library Apps</a> project.
    </dd>
-   <dt><a name="FRAD"></a>FRAD</dt>
-   <dd>
-    An acronym for <a href="http://www.ifla.org/publications/functional-requirements-for-authority-data">Functional
-	Requirements for Authority Data</a>, a <a href="#FRBR">FRBR</a>-based specification for Authority data.
-   </dd>
    <dt><a name="FRBR"></a>FRBR</dt>
    <dd> 
     An acronym for <a href="http://www.ifla.org/publications/functional-requirements-for-bibliographic-records">Functional Requirements for Bibliographic Records</a> is an Entity-Relationship model for bibliographic records that was first released in 1998 by an 
-    <a href="#IFLA">IFLA</a> study group. FRBR is composed of four main entities; Work, Expression, Manifestation, and Item also
-     known as <a href="#WEMI">WEMI</a> along with various other entities to support creator, publisher, and subject authority
-     relationships with the core WEMI entities. 
+    IFLA study group. FRBR is composed of four main entities; Work, Expression, Manifestation, and Item also
+    known as <a href="#WEMI">WEMI</a> along with various other entities to support creator, publisher, and subject authority
+    relationships with the core WEMI entities. 
    <dt><a name="HTML5"></a>HTML5</dt>
    <dd>
     HTML5 is the latest HTML specification from W3C and offers a lot features and advantages over older HTML
     specifications including better support for video, local storage, and micro-data.
    </dd>
-   <dt><a name="IFLA"></a>IFLA</dt>
-   <dd>
-    An acronym for 
-    <a href="http://www.ifla.org/">International Federation of Library Associations and Institutions</a> an international
-    professional organization.
-   </dd>
    <dt><a name="Instance"></a>Instance</dt>
    <dd>A core class of the <a href="#BIBFRAME">BIBFRAME</a> model with the draft specification available 
     at <a href="http://bibframe.org/vocab/Instance.html">http://bibframe.org/vocab/Instance.html</a>.
-   </dd>
-   <dt><a name="jQuery"></a>jQuery</a></dt>
-   <dd>
-    One of the most used javascript libraries and is used by other frameworks like
-    <a href="#Bootstrap">Bootstrap</a>. jQuery is available at
-    <a href="
-   </dd>
-   <dt><a name="Knockoutjs"></a>Knockout</a></dt>
-   <dd>
-    An open-source Model-View-View-Model Javascript project used for rich and dynamic HTML5 user interfaces
-    in the <a href="#aristotle-library-apps">Aristotle Library Apps</a> project. Knockout is available 
-    at <a href="http://knockoutjs.com/index.html">http://knockoutjs.com/index.html</a>
    </dd>
    <dt><a name="LinkedData"></a>Linked Data</dt>
    <dd>
@@ -173,6 +142,10 @@
     An acronym for the Redis Library Services Platform, an open source project made up of two open source
     projects, <a href="#BIBFRAME-Datastore">BIBFRAME-Datastore</a> and 
     <a href="#aristotle-library-apps">Aristotle Library Apps</a>.
+   </dd>
+   <dt><a name="schema"></a>Schema.org</dt>
+   <dd>
+    A joint effort by Google, Microsfot, Bandu, and Yan.., a schema 
    </dd>
    <dt><a name="Topic"></a>Topic</dt>
    <dd>

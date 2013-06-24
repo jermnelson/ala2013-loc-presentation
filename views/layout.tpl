@@ -10,7 +10,7 @@
     <meta name="author" content="Jeremy Nelson">
 
     <!-- Le styles -->
-    <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/ala2013/assets/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 20px;
@@ -53,14 +53,14 @@
        color: #530921 !important;
       }
     </style>
-    <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/ala2013/assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
+      <script src="/ala2013/assets/js/html5shiv.js"></script>
     <![endif]-->
 
     <!-- Fav and touch icons -->
@@ -97,18 +97,7 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://twitter.github.io/bootstrap/assets/js/jquery.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-transition.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-alert.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-modal.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-dropdown.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-scrollspy.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-tab.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-tooltip.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-popover.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-button.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-collapse.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-carousel.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-typeahead.js"></script>
+    <script src="/ala2013/assets/js/jquery.js"></script>
+    <script src="/ala2013/assets/js/bootstrap.min.js"></script>
   </body>
 </html>

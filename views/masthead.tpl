@@ -34,7 +34,7 @@
    class="dropdown"
    % end
    >
-    <a href="/resources"
+    <a href="/ala2013/resources"
        class="dropdown-toggle"
        data-toggle="dropdown"
        href="#">Addendum
@@ -45,17 +45,17 @@
       % if page == 'resources':
       class="active"
       % end
-      ><a href="/resources">Resources</a></li>
+      ><a href="/ala2013/resources">Resources</a></li>
       <li
       % if page == 'glossary':
       class="active"
       % end
-      ><a href="/glossary.html">Glossary</a></li>
+      ><a href="/ala2013/glossary.html">Glossary</a></li>
       <li
       % if page == 'contact':
       class="active"
       % end
-      ><a href="/contact">Contact Information</a></li> 
+      ><a href="/ala2013/contact">Contact Information</a></li> 
     </ul>
     </a>
   </li>

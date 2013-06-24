@@ -34,8 +34,13 @@
  <h2 align="center" class="slide">E - Embrace</h2>
  <p class="lead"><strong>Embracing</strong> existing vocabularies and ontologies as driven
  by actionable metrics and desires of the platform's users. This includes closely tracking
- the <a href="/glossary.html#bibframe">Bibframe</a> vocabulary as it improves and changes
- are made.</p>
+ the <a href="/ala2013/glossary.html#bibframe">Bibframe</a> vocabulary as it improves and changes
+ are made. Other vocabularies that are partially implemented in 
+  <a href="/ala2013/glossary.html#rlsp">RLSP</a>
+ include <a href="/ala2013/glossary.html#schema">schema.org</a>, 
+ <a href="/ala2013/glossary.html#provenance">open provenance</a>, and 
+ <a href="/ala2013/glossary.html#open-annotation">open annotation</a>.
+ </p>
  </div>
 </div>
 <div class="row-fluid marketing">

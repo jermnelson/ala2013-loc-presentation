@@ -18,7 +18,7 @@
     }, 
     {
       "@type": "WebPage", 
-      "description": "Bibframe entities are represented in the Redis Library Services Platform as a collection of Redis key patterns. By convention, most Bibframe Entities core Redis key is associated with a Redis hash data primitive.", 
+      "description": "Bibframe entities are represented in the Redis Library Services Platform as a collection of Redis key patterns. By convention, most Bibframe entities' core Redis key is associated with a Redis hash data primitive.", 
       "headline": "Bibframe Entities in Redis", 
       "name": "bibframe-redis"
     }, 
