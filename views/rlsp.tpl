@@ -15,8 +15,12 @@
   <h2>Aristotle Library Apps</h2>
   <p class="lead">
    Designed as loosely coupled single-page <a href="/ala2013/glossary.html#html5">HTML5</a> apps
-   targeting mobile and tablet user-interfaces with progessie enhancements for full-desktop
-   web browsers and network speeds.
+   targeting mobile and tablet user-interfaces with progessive enhancements for full-desktop
+   web browsers and network speeds. Use a 
+   <a href="/ala2013/glossary.html#lean-startup">Lean start-up</a> model, the current version of 
+   Aristotle Library Apps project is a <a href="/ala2013/glossary.html#minimal-viable-product">MVP</a>
+   user interface that is being actively developed and improved following an iterative, 
+   <a href="/ala2013/glossary.html#agle">Agle</a> software development cycle.
   </p>
   <ul class="icons-ul lead">
    <li><i class="icon-li icon-arrow-right"></i>Based on <a href="/ala2013/glossary.html#django">Django</a></li>

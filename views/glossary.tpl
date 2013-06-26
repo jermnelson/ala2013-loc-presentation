@@ -84,13 +84,32 @@
     Linked Data is an international effort by multiple user communities to build a semantic web for representing relationships
     between entities and objects on the Internet.
    </dd>
+   <dt><a name="lean-startup"></a>Lean Startup</a></dt>
+   <dd>
+
+
+   </dd>
    <dt><a name="MARC21"></a>MARC21</a></dt>
    <dd>
     An acronym for <b>Ma</b>chine <b>R</b>eadable <b>C</b>ataloging record, MARC21 is the most 
     widely used data-carrier format and specification 
     used by libraries today. 
    </dd>
+   <dt><a name="minimal-viable-product"></a>Minimal Viable Product</dt>
+   <dd>In <a href="#lean-startup">Lean Startup</a>, a product that demostrates the most 
+    basic functionality so that iterative testing and improvements can be made using 
+    cohort or A/B testing and user interaction to test assumestations and hypotheses 
+    in a learning organization.
+   </dd>
+   <dt><a name="minimal-viable-record"></a>Minimal Viable Record</dt>
+   <dd>
+    Derived from the concept of a <a href="#minimal-viable-product">Minimal Viable Product</a>,
+    is a bibliographic record that can be ingested into the 
+   <a href="#RLSP">Redis Library Services Platform</a> using 
+    the current version of the <a href="#BIBFRAME">BIBFRAME</a> vocabulary.
+   </dd>
   </dl>
+
  </div>
  <div class="span5 well">
   <h3>N through Z</h3>
