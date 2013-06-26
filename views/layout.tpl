@@ -99,5 +99,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="/ala2013/assets/js/jquery.js"></script>
     <script src="/ala2013/assets/js/bootstrap.min.js"></script>
+    <script src="/ala2013/assets/js/default.js"></script>
   </body>
 </html>
