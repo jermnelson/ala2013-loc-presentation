@@ -15,6 +15,8 @@
      data-bind="click: stepOne">1</button>
    <button class="btn"
      data-bind="click: stepTwo">2</button>
+   <button class="btn"
+     data-bind="click: stepThree">3</button>
    <button 
      class="btn btn-success"
      data-bind="click: reloadMARCtoBibframeAnimiation"><i class="icon-refresh"></i></button>
