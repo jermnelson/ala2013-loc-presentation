@@ -20,7 +20,7 @@ PRESENTATION_INFO = json.load(open(os.path.join(PROJECT_ROOT,
 SLIDES = PRESENTATION_INFO.get('slides')
 
 #DEMO_REDIS = redis.StrictRedis(host='li-b82p6v1-1208', port=6380)
-DEMO_REDIS = redis.StrictRedis()
+DEMO_REDIS = redis.StrictRedis(port=6380)
 
 # A list of safe commands for access Redis server directly from the
 # presentation
