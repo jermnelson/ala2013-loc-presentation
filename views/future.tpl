@@ -66,4 +66,6 @@
  </div>
 </div>
 
-%rebase slide previous="/pg-rdf-ingestion", next="/", page=page, slides=slides
+%include js_files
+
+%rebase slide previous="/ala2013/pg-rdf-ingestion", next="/ala2013/contact", page=page, slides=slides

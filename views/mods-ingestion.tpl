@@ -16,4 +16,7 @@
  <div class="span6">
  </div>
 </div>
+
+%include js_files
+
 %rebase slide previous=slides[2].get('name'), next=slides[4].get('name'), page=page, slides=slides

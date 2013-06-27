@@ -4,7 +4,7 @@ function MARC21IngestionModal() {
  self.draw = SVG('marc21-bibframe-animiation');
 
  self.stepOne = function()  {
-  self.stepDescription("Extracts MARC records from Legacy ILS");
+  self.stepDescription("MARC21 records exported from Legacy ILS");
   self.LegacyILSIcon = self.draw.image('/ala2013/assets/img/server.png');
   self.LegacyILSIcon.move(0, 0);
   self.stepOneGroup = self.draw.group();
@@ -31,23 +31,34 @@ function MARC21IngestionModal() {
   self.MARCpyGroup.add(MARCpyIconText);
   self.MARCpyGroup.add(MARCpyIcon);
   self.MARCpyGroup.hide();
+  self.stepTwoGroup = self.draw.group();
+  self.stepTwoGroup.add(self.MARCpyGroup);
   self.RedisIcon = self.draw.image("/ala2013/assets/img/redis.png");
   self.RedisIcon.move(250, 0);
   self.RedisIcon.hide()
   marc21RecordIcon = self.draw.image("/ala2013/assets/img/marc21-icon.gif");
   marc21RecordIcon.move(self.stepOneGroup.x() + 152, self.stepOneGroup.y() + 150);  
+  self.stepTwoGroup.add(marc21RecordIcon);
   self.leaderGroup = self.draw.group();
   self.leaderGroup.add( self.draw.text("LINE 1564: elif leader[6] is 'g'"));
   self.leaderGroup.move(0, 175);
+  self.stepTwoGroup.add(self.leaderGroup);
   self.titleGroup = self.draw.group();
   self.titleGroup.add(self.draw.text("LINE 1642: title_entity = TitleEntity"));
   self.titleGroup.move(0, 175);
+  self.stepTwoGroup.add(self.titleGroup);
   self.MovingImageGroup = self.draw.group();
   MovingImageText = self.draw.text('bf:MovingImage:15');
   MovingImageText.font({family: 'system', size: 14}).stroke({ width: 1, color: '#f00'});
   self.MovingImageGroup.add(MovingImageText);
   self.MovingImageGroup.move(150, 10);
   self.MovingImageGroup.hide();
+  self.TitleEntityGroup = self.draw.group();
+  TitleEntityText = self.draw.text('bf:TitleEntity:200');
+  TitleEntityText.font({family: 'system', size: 14}).stroke({ width: 1, color: '#f00'});
+  self.TitleEntityGroup.add(TitleEntityText);
+  self.TitleEntityGroup.move(150, 20);
+  self.TitleEntityGroup.hide();
   marc21RecordIcon.animate().move(0,  marc21RecordIcon.y()+40).after(function() {
    self.stepOneGroup.hide(); 
    self.MARCpyGroup.show();
@@ -57,57 +68,17 @@ function MARC21IngestionModal() {
      self.RedisIcon.show();
      self.MovingImageGroup.show();
      self.MovingImageGroup.animate().move(250, self.RedisIcon.y() + 70).after(function() {
-       self.titleGroup.animate().move(0, 25);
+       self.titleGroup.animate().move(0, 25).after(function() {
+         self.TitleEntityGroup.show();
+         self.TitleEntityGroup.animate().move(250, 100);
+       });
      });    
    });
   });
    
-/*
-      self.instanceOfGroup = self.draw.group();
-   self.instanceOfGroup.add(self.draw.text("LINE 1085: instance_key = self.marc2instance"));
-   self.instanceOfGroup.move(0, 175);
-   self.leaderGroup.animate().move(0, 5);
-   self.titleGroup.animate().move(0, 15);
-   self.instanceOfGroup.animate().move(0, 45);
-  },
-  2000);
-  /*
-  // marc21RecordIcon.animate().move(150, 200);
-  self.stepTwoGroup = self.draw.group();
-  //self.stepTwoGroup.add(marc21RecordIcon);
-    // self.PythonIcon = self.draw.image("/ala2013/assets/img/python-powered-h-70x91.png");
+  // self.PythonIcon = self.draw.image("/ala2013/assets/img/python-powered-h-70x91.png");
   // self.PythonIcon.move(150, 0);
-  self.RedisIcon = self.draw.image("/ala2013/assets/img/redis.png");
-  self.RedisIcon.move(150, 0);
-  self.RedisIcon.hide();
-  
-    self.leaderGroup = self.draw.group();
-  leaderPostitionText = self.draw.text("LINE 1564: elif leader[6] is 'g'");
-  self.leaderGroup.add(leaderPostitionText);
-  self.leaderGroup.move(0, 
-                        MARC21RecordIcon.y() - 10);
-  self.leaderGroup.hide();
-  setInterval(function() {
-      self.MARCpyGroup.show(); 
-      self.MARCpyGroup.animate(2000).move(0,30).after(function() {
-       self.leaderGroup.show();
-       self.leaderGroup.animate(2000).move(0, 0);
-    }); 
-   },
-   2000);
-  self.stepTwoGroup.add(self.leaderGroup);
-  self.MovingImageGroup = self.draw.group();
-  MovingImageText = self.draw.text('bf:MovingImage:15');
-  MovingImageText.font({family: 'system', size: 14}).stroke({color: '#f00'});
-  self.MovingImageGroup.add(MovingImageText);
-  self.MovingImageGroup.move(150, 10);
-  self.MovingImageGroup.hide();
-  setInterval(function() {
-    self.RedisIcon.show();
-    self.MovingImageGroup.show();
-    self.MovingImageGroup.animate(2000).move(350, 40);
-   },
-   3000); 
+  ; 
   // self.MovingImageWorkFlow.show();
   // self.MovingImageWorkFlow.animate().move(60, 50);
   //self.WorkGroup = self.draw.group();
@@ -115,11 +86,7 @@ function MARC21IngestionModal() {
   //                                80);
   // self.WorkBorder.stroke({width: 1, color: '#f00'}).fill({color: '#fff'});
   // self.WorkGroup.add(self.WorkBorder);
-  self.MovingImageIcon = self.draw.image("/ala2013/assets/img/animation_64x64.png");
-  self.WorkGroup.add(self.MovingImageIcon);
-  self.WorkGroup.add(self.MovingImageText);
-  self.WorkGroup.move(self.RedisIcon.x() + 45,
-                      self.RedisIcon.y() + 80); 
+  /*
   self.InstanceGroup = self.draw.group();
   self.InstanceGroup.add(self.draw.image('/ala2013/assets/img/cinema_64x64.png'));
   self.InstanceGroup.add(self.draw.text('bf:Instance:45'));
@@ -143,11 +110,43 @@ function MARC21IngestionModal() {
                        "that can now be accessed by Mobile, Tablet, and Web " +
                        "Browser Users as well as by software agents and " +
                        "algorithms.");
+  self.stepTwoGroup.opacity(0.5);
+  self.WorkGroup = self.draw.group();
+  var MovingImageIcon = self.draw.image("/ala2013/assets/img/animation_64x64.png");
+  self.WorkGroup.add(MovingImageIcon);
+  var MovingImageIconText = self.draw.text("Moving Image Object");
+  MovingImageIconText.font({size: 18});
+  MovingImageIconText.move(MovingImageIcon.x() - 10,
+                           MovingImageIcon.y() + 95)
+  self.WorkGroup.add(MovingImageIconText);
+  self.WorkGroup.move(200, 100);
+  self.WorkGroup.hide();
+  self.aristotleGroup = self.draw.group();
+  var appImage = self.draw.image('/ala2013/assets/img/mobile_64x64.png');
+  self.aristotleGroup.add(appImage);
+  var appImageText = self.draw.text("Aristotle Library Apps");
+  appImageText.font({size: 18});
+  appImageText.move(appImage.x() - 15, appImage.y() + 90);
+  self.aristotleGroup.add(appImageText);
+  self.aristotleGroup.move(350, 0);
+  self.aristotleGroup.hide();
+  setInterval(function () {
+    self.stepTwoGroup.hide();
+    self.RedisIcon.animate().move(0, 0).after(function () {
+      self.TitleEntityGroup.animate().move(0, 70).after(function() {
+        self.MovingImageGroup.animate().move(0, 90).after(function() {
+          self.WorkGroup.show();
+          self.aristotleGroup.show();
+        });
+      });
+    });
+  },
+  1500);
+
   /*
   self.stepTwoGroup.move(self.stepTwoGroup.x() - 60,
                          self.stepTwoGroup.y());
-  self.stepTwoGroup.opacity(0.5);
-  self.leaderGroup.hide();
+    self.leaderGroup.hide();
   self.WorkGroup.animate().move(self.WorkGroup.x() + 100,
                                 self.WorkGroup.y() - 50);
 
@@ -166,9 +165,8 @@ function MARC21IngestionModal() {
  }
 
  self.reloadMARCtoBibframeAnimiation = function() {
-  alert("In reload");
-  /*
   self.draw.clear();
+  /*
   self.PersonIconText = self.draw.text("Person Authority");
   self.PersonIconText.move(self.PersonIcon.x() + 20, self.PersonIcon.y() + 100).fill('#000');
   self.PersonIconText.font({family: 'Courier Sans Serif', size: 18, anchor: 'middle', leading: 1});

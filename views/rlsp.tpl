@@ -144,7 +144,7 @@
  </div>
 </div>
 
-<script src="http://twitter.github.io/bootstrap/assets/js/jquery.js"></script>
+%include js_files
 <script src="/ala2013/assets/js/Chart.min.js" type="text/javascript"></script> 
 <script>
  var ctx = $('#cc-rlsp-pie').get(0).getContext('2d');

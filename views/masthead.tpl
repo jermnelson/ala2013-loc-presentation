@@ -34,11 +34,10 @@
    class="dropdown"
    % end
    >
-    <a href="/ala2013/resources"
+    <a href="#"
        class="dropdown-toggle"
        data-toggle="dropdown"
-       href="#">Addendum
-    <i class="caret"></i>
+       >Addendum <i class="caret"></i>
     </a>
     <ul class="dropdown-menu" role="menu">
       <li

@@ -48,11 +48,9 @@
 </div>
 
 <script src="/ala2013/assets/js/jquery.js"></script>
-<script src="/ala2013/assets/js/bootstrap.js"></script>
 <script src="/ala2013/assets/js/knockout.js"></script>
-<!-- <script src="/assets/js/raphael-min.js"></script> //-->
+<script src="/ala2013/assets/js/bootstrap.min.js"></script>
 <script src="/ala2013/assets/js/svg.min.js" type="text/javascript"></script>
-<script src="/ala2013/assets/js/svg.import.min.js" type="text/javascript"></script>
 <script src="/ala2013/assets/js/default.js" type="text/javascript"></script>
 <script type="text/javascript">
 ko.applyBindings(new MARC21IngestionModal());

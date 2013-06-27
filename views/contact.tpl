@@ -22,4 +22,6 @@
  </address>
  </div> 
 </div>
+
+%include js_files
 %rebase layout
