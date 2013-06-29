@@ -27,7 +27,9 @@ DEMO_REDIS = redis.StrictRedis(port=6380)
 SAFE_COMMANDS = ['exists',
                  'hget',
                  'hgetall',
+                 'hkeys',
                  'hlen',
+                 'keys',
                  'scard',
                  'smembers',
                  'zcount'
@@ -51,7 +53,7 @@ def bibframe_redis():
     "Slide view for BIBFRAME Entities in Redis" 
     return template('bibframe-redis',
                     category='slide',
-                    cover_art_key='bf:CoverArt:34',
+                    cover_art_key='bf:CoverArt:22',
                     creative_wrk_key='bf:MovingImage:1',
                     facet_annotation_key='bf:Annotation:Facet:1',
                     holding_key='bf:Holding:234',

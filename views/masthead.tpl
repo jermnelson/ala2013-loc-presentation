@@ -59,5 +59,5 @@
     </a>
   </li>
  </ul>
- <h3 class="muted">ALA 2013 - Bibframe Forum</h3>
+ <h3 class="muted">ALA 2013 - BIBFRAME Forum</h3>
 </div>

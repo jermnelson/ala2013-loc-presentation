@@ -1,6 +1,6 @@
 <div class="row-fluid">
   <div class="span12 hero-unit">
-   <h3>Experimenting with Bibframe & Redis</h3>
+   <h3>Experimenting with BIBFRAME &amp; Redis</h3>
    <h1 class="slide">{{!slides[0].get('headline')}}</h1>
    <p class="lead">
     {{!slides[0].get('description')}}
@@ -8,6 +8,36 @@
   </div>
 </div>
 
+ <hr>
+ <div class="row-fluid marketing">
+  <div class="span21">
+   <img src="/ala2013/assets/img/redis.png" style="float: right">
+   <h2>What is Redis?</h2>
+  <blockquote class="pull-left">
+  <p>
+   The most apt description of Redis is that it is a "data structure server". 
+   This is a very natural label for the database, because Redis natively 
+   supports many of the foundational data types of computer science, and 
+   provides a rich set of familiar primitives for manipulating these types.
+  </p>
+  <p>
+   The supported data types are:
+   <ul style="font-size: 1.2em">
+   <li>Strings</li>
+   <li>Lists</li>
+   <li>Sets</li>
+   <li>Sorted Sets</li>
+   <li>Hashes</li>
+   </ul>
+  </p>
+  <small>
+    Michael J. Russo. <cite title="Source Title"><em>Redis, from the Ground Up</em></cite>
+   <sup><a href="/ala2013/resources.html#Russo">ref</a></sup>
+  </small>
+  </blockquote>
+
+  </div>
+ </div>
  <hr>
 
 <div class="row-fluid marketing">
@@ -24,10 +54,10 @@
   </p>
   <ul class="icons-ul lead">
    <li><i class="icon-li icon-arrow-right"></i>Based on <a href="/ala2013/glossary.html#django">Django</a></li>
-   <li><i class="icon-li icon-arrow-right"></i>Interfaces with <a href="/ala2013/glossary.html#redis">Redis datastore</a></li>
-   <li><i class="icon-li icon-arrow-right"></i><a href="/ala2013/glossary.html#solr">Solr</a> text indexer </li>
+   <li><i class="icon-li icon-arrow-right"></i>API interface to <a href="/ala2013/glossary.html#redis">Redis datastore</a></li>
+   <li><i class="icon-li icon-arrow-right"></i>Limited support for <a href="/ala2013/glossary.html#solr">Solr</a> text indexer </li>
    <li><i class="icon-li icon-arrow-right"></i><a href="/ala2013/glossary.html#fedora-commons">Fedora commons</a> digital repository 
-   software.</li>
+   utilities.</li>
   </ul>
   <div class="alert alert-primary">
    All source code is licensed under the Apache 2 and is available at this Github repository: 
@@ -132,6 +162,9 @@
        <a href="#">rediscluser</a> python module</li>
   </ul>
   <h4>Example: Tutt Library TLC1 Clusters</h4>
+   <img src="/ala2013/assets/img/jon-driscoll-tlc1-2013.jpg" title='Jon Driscoll in TLC1 Computer Lab'  class="img-rounded">
+   <small class="pull-right">Jon Driscoll, the "Ops", in Tutt Library's 
+     <a href="/ala2013/glossary.html#DevOps">DevOps</a>-style Systems group</small>
   <ul class="lead">
     <li>Spare computing cycles of an always on instruction lab with the multi-core
         PC workstations with multiple gig RAM, sit idle most of the time</li>

@@ -56,6 +56,8 @@
     <link href="/ala2013/assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/ala2013/assets/css/prettify.css" rel="stylesheet">
+
 
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->

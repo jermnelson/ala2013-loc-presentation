@@ -12,14 +12,14 @@
   "slides": [
     {
       "@type": "WebPage", 
-      "description": "The Redis Library Services Platform is made up of two open-source projects: the <a href=\"/glossary.html#ala\">Aristotle Library Apps</a> and the <a href=\"/glossary.html#bibframe-datastore\">Bibframe Datastore</a>.", 
+      "description": "The Redis Library Services Platform is made up of two open-source projects: the <a href=\"/glossary.html#ala\">Aristotle Library Apps</a> and the <a href=\"/glossary.html#bibframe-datastore\">BIBFRAME Datastore</a>.", 
       "headline": "Redis Library Services Platform", 
       "name": "rlsp"
     }, 
     {
       "@type": "WebPage", 
-      "description": "Bibframe entities are represented in the Redis Library Services Platform as a collection of Redis key patterns. By convention, most Bibframe entities' core Redis key is associated with a Redis hash data primitive.", 
-      "headline": "Bibframe Entities in Redis", 
+      "description": "BIBFRAME entities are represented in the Redis Library Services Platform as a collection of Redis key patterns. By convention, most BIBFRAME entities' core Redis key is associated with a Redis hash data primitive.", 
+      "headline": "BIBFRAME Entities in Redis", 
       "name": "bibframe-redis"
     }, 
     {
@@ -39,14 +39,14 @@
      {
       "@type": "WebPage", 
       "dateCreated": "2013-06-19",
-      "description": "Project Gutenberg provides <a href=\"/glossary.html#RDF\">RDF</a> records for each work in their corpus of online ebooks. Using XPath, these rdf records were ingested as Bibframe entities in the <a href=\"/glossary.html#RLSP\">Redis Library Services Platform</a>.",
+      "description": "Project Gutenberg provides <a href=\"/glossary.html#RDF\">RDF</a> records for each work in their corpus of online ebooks. Using XPath, these rdf records were ingested as BIBFRAME entities in the <a href=\"/glossary.html#RLSP\">Redis Library Services Platform</a>.",
       "headline": "Ingesting Project Gutenberg Records",
       "name": "pg-rdf-ingestion"
     },
     {
       "@type": "WebPage", 
       "dateCreated": "2013-06-11", 
-      "description": "The development road-map for the Redis Library Services Platform and Bibframe focuses on <strong>Engaging</strong> users, <strong>Enhancing</strong> user interfaces and functionality, <strong>Embrancing</strong> Bibframe and other vocabularies and schemas, <strong>Extending</strong> to use other software services and resources, and <strong>Experimenting</strong> with bibliographic, linked data, and semantic web technologies and services", 
+      "description": "The development road-map for the Redis Library Services Platform and BIBFRAME focuses on <strong>Engaging</strong> users, <strong>Enhancing</strong> user interfaces and functionality, <strong>Embrancing</strong> BIBFRAME and other vocabularies and schemas, <strong>Extending</strong> to use other software services and resources, and <strong>Experimenting</strong> with bibliographic, linked data, and semantic web technologies and services", 
       "headline": "The Future: Four Es +1",
       "name": "future"
     }

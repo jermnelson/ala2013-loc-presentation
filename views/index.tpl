@@ -1,7 +1,7 @@
 %include masthead category='home', page='home', slides=slides
 
 <div class="jumbotron">
- <h1>Experimenting with Bibframe &amp; Redis</h1>
+ <h1>Experimenting with BIBFRAME &amp; Redis</h1>
   <p class="lead">
    Jeremy Nelson<br>
    Metadata and Systems Librarian<br>
