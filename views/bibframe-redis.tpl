@@ -85,7 +85,8 @@
     <a href="/glossary.html#schema">schema.org</a> 
     metadata is linked to BIBFRAME entities using Redis key 
     structures and follows the practice of 
-    Compact IRIs uses a prefix, most often the most common expressed 
+    <a href="/ala2013/glossary.html#compact-iri">Compact IRI</a> by using a prefix, 
+     most often the most common expressed 
     namespaces to distinguish different vocabularies and schemas.
    </p>
   </div>

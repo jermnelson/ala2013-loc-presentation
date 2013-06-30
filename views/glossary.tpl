@@ -49,8 +49,13 @@
    <dd>
      A core class of the <a href=#BIBFRAME">BIBFRAME</a> model.
    </dd>
-     <a href="#instance">Instance</a> to a <a href="#people">People</a>, <a href="#places">Places</a>,
-
+   <dt><a name="compact-iri"></a> Compact IRI</dt>
+   <dd>
+    A method of expressing an Internationalized Resource Identifier using a prefix, colon, and 
+    suffix where the prefix identifies the scope or namespace and the suffix is unique within
+    that scope. See this <a href="http://www.w3.org/TR/json-ld/#compact-iris">explanation</a> 
+    from JSON-LD W3C working group for more information.
+   </dd>
    <dt><a name="DevOps"></a>DevOps</a></dt>
    <dd>
     A new buzzword in information technology, DevOps (short of development and operations),
@@ -96,9 +101,9 @@
     used by libraries today. 
    </dd>
    <dt><a name="minimal-viable-product"></a>Minimal Viable Product</dt>
-   <dd>In <a href="#lean-startup">Lean Startup</a>, a product that demostrates the most 
+   <dd>In <a href="#lean-startup">Lean Startup</a>, a product that demonstrates the most 
     basic functionality so that iterative testing and improvements can be made using 
-    cohort or A/B testing and user interaction to test assumestations and hypotheses 
+    cohort or A/B testing and user interaction to test assumptions and hypotheses 
     in a learning organization.
    </dd>
    <dt><a name="minimal-viable-record"></a>Minimal Viable Record</dt>
@@ -164,7 +169,8 @@
    </dd>
    <dt><a name="schema"></a>Schema.org</dt>
    <dd>
-    A joint effort by Google, Microsfot, Bandu, and Yan.., a schema 
+    A joint effort by Google, Microsoft, and Yandex that allows web developers to mark-up websites
+    with semantically meaningful way in a structured environment. 
    </dd>
    <dt><a name="Topic"></a>Topic</dt>
    <dd>
