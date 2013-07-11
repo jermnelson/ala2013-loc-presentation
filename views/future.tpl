@@ -90,7 +90,7 @@
   The <a href="/ala2013/glossary.html#rlsp">Redis Library Services
   Platform</a> is promising technological approach to imagining the future
   of bibliographic information and the tools we'll need for transitioning
-  form MARC21 to the new BIBFRAME and other models. 
+  from MARC21 to the new BIBFRAME and other models. 
  </p>
  <p style="font-size: 1.1em">
   These experiments wouldn't have 
